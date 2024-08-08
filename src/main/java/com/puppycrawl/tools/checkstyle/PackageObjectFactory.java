@@ -601,6 +601,8 @@ public class PackageObjectFactory implements ModuleFactory {
                 BASE_PACKAGE + ".checks.coding.MatchXpathCheck");
         NAME_TO_FULL_MODULE_NAME.put("UnusedLocalVariableCheck",
                 BASE_PACKAGE + ".checks.coding.UnusedLocalVariableCheck");
+        NAME_TO_FULL_MODULE_NAME.put("UnusedCatchParameterShouldBeUnnamedCheck",
+                BASE_PACKAGE + ".checks.coding.UnusedCatchParameterShouldBeUnnamedCheck");
     }
 
     /**
@@ -621,6 +623,8 @@ public class PackageObjectFactory implements ModuleFactory {
                 BASE_PACKAGE + ".checks.design.MutableExceptionCheck");
         NAME_TO_FULL_MODULE_NAME.put("OneTopLevelClassCheck",
                 BASE_PACKAGE + ".checks.design.OneTopLevelClassCheck");
+        NAME_TO_FULL_MODULE_NAME.put("SealedShouldHavePermitsListCheck",
+                BASE_PACKAGE + ".checks.design.SealedShouldHavePermitsListCheck");
         NAME_TO_FULL_MODULE_NAME.put("ThrowsCountCheck",
                 BASE_PACKAGE + ".checks.design.ThrowsCountCheck");
         NAME_TO_FULL_MODULE_NAME.put("VisibilityModifierCheck",

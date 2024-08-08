@@ -362,6 +362,7 @@
     <module name="InterfaceIsType"/>
     <module name="MutableException"/>
     <module name="OneTopLevelClass"/>
+    <module name="SealedShouldHavePermitsList"/>
     <module name="ThrowsCount">
       <property name="max" value="2"/>
     </module>
@@ -581,6 +582,14 @@
     <module name="UnnecessarySemicolonAfterTypeMemberDeclaration"/>
     <module name="UnnecessarySemicolonInEnumeration"/>
     <module name="UnnecessarySemicolonInTryWithResources"/>
+    <module name="UnusedCatchParameterShouldBeUnnamed">
+      <!--
+        Unnamed catch parameters will not compile on java versions between 9 and 21. As
+        we migrate to jdk 21 we will use xpath to avoid violations on
+        names like 'ignored'.
+      -->
+      <property name="severity" value="ignore"/>
+    </module>
     <module name="UnusedLocalVariable"/>
     <module name="VariableDeclarationUsageDistance"/>
     <module name="WhenShouldBeUsed">

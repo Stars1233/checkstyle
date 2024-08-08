@@ -325,6 +325,7 @@ Dorekit
 Dorg
 DOTALL
 doubletag
+downloader
 doxia
 Dpi
 Dpmd
@@ -586,6 +587,7 @@ importorder
 importrule
 imprt
 Incompatabilities
+indentcontinuationlines
 Inet
 infinispan
 initializedfields
@@ -1140,6 +1142,7 @@ rickgiles
 rightcurly
 Rl
 rnveach
+robinraju
 romani
 romanivanovjr
 rp
@@ -1172,6 +1175,7 @@ scp
 screenshot
 Scss
 sdk
+sealedshouldhavepermitslist
 selfexplanatory
 Selkin
 semaphoreci
@@ -1372,6 +1376,7 @@ unnecessarysemicolonintrywithresources
 Unproxyable
 unregister
 unsubscribe
+unusedcatchparametershouldbeunnamed
 unusedimports
 unusedlocalvariable
 uppercased

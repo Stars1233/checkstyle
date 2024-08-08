@@ -655,7 +655,7 @@
                 </td>
                 <td>
                   <span class="wrapper inline">
-                    <img src="images/ok_green.png" alt="" />
+                    <img src="images/ok_blue.png" alt="" />
                   </span>
                   <a href="checks/blocks/leftcurly.html#LeftCurly">LeftCurly</a>
                   <br/>
@@ -664,6 +664,13 @@
                     <img src="images/ok_blue.png" alt="" />
                   </span>
                   <a href="checks/blocks/rightcurly.html#RightCurly">RightCurly</a>
+                  <br/>
+                  <br/>
+                  The "Exception" part of the rule is not satisfied,
+                  it will be addressed in the issue
+                  <a href="https://github.com/checkstyle/checkstyle/issues/14294">
+                    #14294
+                  </a>
                 </td>
                 <td>
                   <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+LeftCurly">
@@ -790,6 +797,7 @@
                   </span>
                   <a href="checks/sizes/linelength.html#LineLength">LineLength</a>
                   <br />
+                  <br />
                   We can detect URL with protocol type as http://, https:// etc.
                   <br />
                   <a href="https://webtoolkit.googleblog.com/2008/07/getting-to-really-know-gwt-part-1-jsni.html">
@@ -798,6 +806,10 @@
                   <a href="https://github.com/checkstyle/checkstyle/issues/14938">
                     #14938</a>.
                   <br />
+                  <br />
+                  Long identifiers will be handled at
+                  <a href="https://github.com/checkstyle/checkstyle/issues/15233">#15233</a>.
+                  <br/>
                 </td>
                 <td>
                   <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+LineLength">
@@ -953,7 +965,7 @@
                 </td>
                 <td>
                   <span class="wrapper inline">
-                    <img src="images/ok_green.png" alt="" />
+                    <img src="images/ok_blue.png" alt="" />
                   </span>
                   <a href="checks/whitespace/whitespacearound.html#WhitespaceAround">
                     WhitespaceAround</a>
@@ -998,12 +1010,12 @@
                   <a href="checks/whitespace/nowhitespacebeforecasedefaultcolon.html#NoWhitespaceBeforeCaseDefaultColon">
                     NoWhitespaceBeforeCaseDefaultColon</a>
                   <br />
-                  <br />
-                  Between a type annotation and "[]" or "..." cannot be checked
-                  yet and actually "NoWhitespaceBefore" configuration checks the
-                  opposite for ellipsis. This will be addressed in the issue
-                  <a href="https://github.com/checkstyle/checkstyle/issues/6707">
-                    #6707</a>.
+                  <br/>
+                  There are some false positive and negative cases for "{}" and "{ }".
+                  See issue
+                  <a href="https://github.com/checkstyle/checkstyle/issues/15338">
+                    #15338</a>
+                  for more detailed explanation.
                 </td>
                 <td>
                   <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+WhitespaceAround">
@@ -1334,6 +1346,35 @@
                 <td/>
               </tr>
               <tr>
+                <td><a name="4.8.5.1"/>
+                  <a href="#4.8.5.1">
+                    <span class="wrapper inline">
+                      <img src="images/anchor.png" alt=""/>
+                    </span>
+                  </a>
+                </td>
+                <td>
+                  <a href="styleguides/google-java-style-20220203/javaguide.html#s4.8.5.1-type-use-annotation-style">
+                    4.8.5.1 Type-use annotations
+                  </a>
+                </td>
+                <td>
+                  <span class="wrapper inline">
+                    <img
+                        src="images/ban_red.png"
+                        alt="" />
+                  </span>
+                  Type-use annotations cannot be detected by Checkstyle due to it's
+                  <a href="https://checkstyle.org/writingchecks.html#Limitations">
+                    limitations</a>,
+                  see issue
+                  <a href="https://github.com/checkstyle/checkstyle/issues/15416">
+                    #15416</a>
+                  for more detailed explanation.
+                </td>
+                <td/>
+              </tr>
+              <tr>
                 <td><a name="4.8.5.2"/>
                   <a href="#4.8.5.2">
                     <span class="wrapper inline">
@@ -1567,7 +1608,21 @@
                   <a href="styleguides/google-java-style-20220203/javaguide.html#s5.1-identifier-names">
                     5.1 Rules common to all identifiers</a>
                 </td>
-                <td>"5.2 Rules of identifier type" already includes this rule.
+                <td>
+                  <span class="wrapper inline">
+                    <img src="images/ok_green.png" alt="" />
+                  </span>
+                  <a href="checks/naming/catchparametername.html#CatchParameterName">CatchParameterName</a>
+                  <br/>
+                  <br/>
+                  All other types of identifiers are covered in special sections below
+                </td>
+                <td>
+                  <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+CatchParameterName">
+                    config</a>
+                  <br />
+                  <a href="https://github.com/checkstyle/checkstyle/blob/master/src/it/java/com/google/checkstyle/test/chapter5naming/rule51identifiernames/RulesCommonToAllIdentifiersTest.java">
+                    test</a>
                 </td>
                 <td/>
               </tr>
@@ -1660,9 +1715,10 @@
                         alt="" />
                   </span>
                   <a href="checks/naming/methodname.html#MethodName">MethodName</a>
-                  <br/> No ability to distinguish verb at the beginning of name,
-                  no way distinguish Test method from others so "_" is allowed in
-                  names
+                  <br/> No ability to distinguish verb at the beginning of name;
+                  distinguishing of Test method from others to allow "_" in test methods only
+                  will be done at
+                  <a href="https://github.com/checkstyle/checkstyle/issues/15429">#15429</a>.
                 </td>
                 <td>
                   <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+MethodName">
@@ -1968,10 +2024,17 @@
                         alt="" />
                   </span>
                   <a href="checks/blocks/emptyblock.html#EmptyBlock">EmptyBlock</a>
-                  with option=text.
+                  <br />
+                  <br />
+                  <span class="wrapper inline">
+                    <img src="images/ok_green.png" alt="" />
+                  </span>
+                  <a href="checks/blocks/emptycatchblock.html#EmptyCatchBlock">EmptyCatchBlock</a>
                 </td>
                 <td>
                   <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+EmptyBlock">
+                    config</a><br/>
+                  <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+EmptyCatchBlock">
                     config</a><br/>
                   <a href="https://github.com/checkstyle/checkstyle/blob/master/src/it/java/com/google/checkstyle/test/chapter6programpractice/rule62donotignoreexceptions/CaughtExceptionsNotIgnoredTest.java">
                     test</a>
@@ -2273,7 +2336,7 @@
                 <td>
                   <span class="wrapper inline">
                     <img
-                        src="images/ok_green.png"
+                        src="images/ok_blue.png"
                         alt="" />
                   </span>
                   <a href="checks/javadoc/missingjavadocmethod.html#MissingJavadocMethod">MissingJavadocMethod</a>
@@ -2285,6 +2348,15 @@
                         alt="" />
                   </span>
                   <a href="checks/javadoc/javadocmethod.html#JavadocMethod">JavadocMethod</a>
+                  <br/>
+                  <br/>
+                  "protected" methods are not detected for missing javadoc, it will be addressed at:
+                  <a href="https://github.com/checkstyle/checkstyle/issues/15434">#15434</a>
+                  <br/>
+                  <br/>
+                  Optional javadoc for "simple, obvious" members is not fully supported,
+                  it will be addressed at:
+                  <a href="https://github.com/checkstyle/checkstyle/issues/15414">#15414</a>
                 </td>
                 <td>
                   <a href="https://github.com/search?q=path%3Asrc%2Fmain%2Fresources%20path%3A**%2Fgoogle_checks.xml+repo%3Acheckstyle%2Fcheckstyle+MissingJavadocMethod">
