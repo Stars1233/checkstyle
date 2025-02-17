@@ -6,6 +6,10 @@
 
 <suppressions>
 
+  <!-- private class used to show violation on it -->
+  <suppress id="exampleClassName"
+    files="regexp[\\/]Example4.java"/>
+  
   <!-- The files have no exampleClassName by design. -->
   <suppress id="exampleClassName"
     files="outertypefilename[\\/]Example3.java"/>
@@ -32,6 +36,30 @@
   <suppress id="exampleFileName" files="package-info.java"/>
   <suppress id="exampleClassName" files="package-info.java"/>
 
+  <!-- files used to demonstrate violations on naming -->
+  <suppress id="exampleFileName"
+            files="beforeexecutionexclusionfilefilter[\\/]test.*"/>
+  <suppress id="exampleClassName"
+            files="beforeexecutionexclusionfilefilter[\\/]test.*"/>
+  <suppress id="xdocStartComment"
+            files="beforeexecutionexclusionfilefilter[\\/]test.*"/>
+  <suppress id="xdocEndComment"
+            files="beforeexecutionexclusionfilefilter[\\/]test.*"/>
+  <suppress id="exampleFileXmlConfigPresence"
+            files="beforeexecutionexclusionfilefilter[\\/]test.*"/>
+
+    <!-- files used to demonstrate violations on xpath single filters -->
+  <suppress id="exampleFileName"
+            files="suppressionxpathsinglefilter[\\/]src.*"/>
+  <suppress id="exampleClassName"
+            files="suppressionxpathsinglefilter[\\/]src.*"/>
+  <suppress id="xdocStartComment"
+            files="suppressionxpathsinglefilter[\\/]src.*"/>
+  <suppress id="xdocEndComment"
+            files="suppressionxpathsinglefilter[\\/]src.*"/>
+  <suppress id="exampleFileXmlConfigPresence"
+            files="suppressionxpathsinglefilter[\\/]src.*"/>
+
   <!-- Check deals with tab characters. -->
   <suppress checks="FileTabCharacter|Indentation"
     files="filetabcharacter[\\/]Example\d+.java"/>
@@ -49,6 +77,10 @@
   <!-- Check applies to resources-noncompilable files.  -->
   <suppress id="presenceOfCompilationComment" files="resources[\\/].*"/>
 
+  <!-- Suppress for files which are part of a non-compilable example fileset -->
+  <suppress id="presenceOfCompilationComment"
+            files="beforeexecutionexclusionfilefilter[\\/].*"/>
+
   <!-- Without showing symbol, user can get confused which one we are referring to -->
   <suppress id="discouragedRegexpInViolationMessage"
     files="operatorwrap[\\/]Example1.java"/>
@@ -57,6 +89,10 @@
   <!-- it prints user regexp -->
   <suppress id="discouragedRegexpInViolationMessage"
             files="regexponfilename[\\/]Example[24].*"/>
+
+  <!-- Suppress forbidden regex messages for avoidstarimport examples -->
+  <suppress id="forbiddenRegexpInViolationMessage"
+    files="avoidstarimport[\\/]Example[1-6].java"/>
 
   <suppress checks="CommentsIndentation"
     files="singlespaceseparator[\\/]Example2.java"/>
