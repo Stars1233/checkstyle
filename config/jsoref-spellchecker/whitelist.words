@@ -25,6 +25,7 @@ allowlegacy
 alot
 amazonaws
 androidx
+Anmol
 annotationlocation
 annotationonsameline
 annotationusestyle
@@ -153,6 +154,8 @@ cdata
 cde
 cdfd
 Cdi
+cdn
+cdnjs
 Cfg
 Cfml
 Cfoo
@@ -204,6 +207,7 @@ clazz
 clemens
 Clickable
 Cloneable
+cloudflare
 clss
 cmdline
 cmp
@@ -274,6 +278,7 @@ davidwalsh
 DBFF
 Dcheckstyle
 dcm
+Dconfig
 Dconnection
 Ddry
 declarationorder
@@ -352,6 +357,7 @@ EBNF
 ecj
 eclemma
 eclipsecommunityawards
+Edad
 edb
 ededed
 edef
@@ -376,6 +382,7 @@ emptystatement
 emptytag
 Emtpy
 endline
+enegger
 ENMI
 ent
 enum
@@ -718,6 +725,7 @@ jquery
 jre
 JScroll
 Jscs
+jsdelivr
 jsecurity
 Jsf
 jshiell
@@ -730,6 +738,7 @@ jsoref
 jsp
 JSplit
 jsr
+JSSOR
 JTable
 JText
 JToggle
@@ -819,6 +828,7 @@ methodparampad
 methodsandconstructorsannotations
 methodtypeparametername
 MEZk
+mfussenegger
 Micha
 microsoft
 minimalistic
@@ -888,6 +898,7 @@ ncss
 needbraces
 NEGS
 Nejmeh
+neovim
 NEQ
 nestedfordepth
 nestedifdepth
@@ -917,7 +928,6 @@ NODESET
 noembed
 noenumtrailingcomma
 nofinalizer
-NOI
 noinspection
 noinspectionreason
 nojavadoc
@@ -955,6 +965,7 @@ npathcomplexity
 npe
 npm
 nrmancuso
+ntokens
 NTU
 nullcase
 NULLCHECK
@@ -962,6 +973,7 @@ nullness
 numberperline
 numericliterals
 nutsandbolts
+nvim
 nvuillam
 OAuth
 objblock
@@ -1048,7 +1060,6 @@ Perror
 pgjdbc
 Pgpg
 Pgpgv
-pguyot
 php
 picocli
 pid
@@ -1147,7 +1158,6 @@ returnsreceiver
 reviewdog
 revwalk
 rfc
-rfe
 Rgb
 rgba
 rhs
@@ -1176,6 +1186,7 @@ Ruslan
 rw
 rx
 sabaka
+Saludo
 Sameline
 sariflogger
 sarifweb
@@ -1199,7 +1210,6 @@ SEO
 separatorwrap
 SERIALVERSIONUID
 servlet
-SETPOINT
 severitymatchfilter
 sevntu
 shanegenschaw
@@ -1218,6 +1228,7 @@ sivakumar
 Slawinski
 slf
 slist
+SLo
 Slurper
 slurpersupport
 Sms
@@ -1228,6 +1239,7 @@ solr
 someinner
 somename
 someoneelse
+someuser
 sonarcloud
 sonarqube
 sonarsource
@@ -1272,6 +1284,7 @@ STT
 Studman
 Styleable
 styleguide
+stylesheet
 subdir
 subelements
 subext

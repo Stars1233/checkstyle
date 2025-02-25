@@ -6,7 +6,7 @@ ignoreCase = (default)false
 minimum = (default)0
 maximum = (default)0
 matchAcrossLines = (default)false
-fileExtensions = (default)all files
+fileExtensions = (default)""
 
 
 */
@@ -214,7 +214,7 @@ class InputRegexpMultilineSemantic2
 
     synchronized void foo() {
         synchronized (this) {} // not OK
-        synchronized (Class.class) { // OK
+        synchronized (Class.class) {
             synchronized (new Object()) {
                 // not OK if checking statements
             }

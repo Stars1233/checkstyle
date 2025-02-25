@@ -5,7 +5,7 @@ message = (default)
 ignoreCase = (default)false
 minimum = (default)0
 maximum = (default)0
-fileExtensions = (default)all files
+fileExtensions = (default)""
 
 
 */
@@ -21,7 +21,7 @@ import java.io.File;
  * Test case for detecting simple semantic violations.
  * @author Lars Kühne
  **/
-class InputRegexpSinglelineSemantic4 // ok
+class InputRegexpSinglelineSemantic4
 {
     /* Boolean instantiation in a static initializer */
     static {
@@ -213,7 +213,7 @@ class InputRegexpSinglelineSemantic4 // ok
 
     synchronized void foo() {
         synchronized (this) {} // not OK
-        synchronized (Class.class) { // OK
+        synchronized (Class.class) {
             synchronized (new Object()) {
                 // not OK if checking statements
             }
