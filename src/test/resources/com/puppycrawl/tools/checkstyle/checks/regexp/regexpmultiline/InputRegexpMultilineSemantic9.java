@@ -6,7 +6,7 @@ ignoreCase = (default)false
 minimum = (default)0
 maximum = 5000
 matchAcrossLines = (default)false
-fileExtensions = (default)all files
+fileExtensions = (default)""
 
 
 */
@@ -22,7 +22,7 @@ import java.io.File;
  * Test case for detecting simple semantic violations.
  * @author Lars Kühne
  **/
-class InputRegexpMultilineSemantic9 // ok
+class InputRegexpMultilineSemantic9
 {
     /* Boolean instantiation in a static initializer */
     static {
@@ -214,7 +214,7 @@ class InputRegexpMultilineSemantic9 // ok
 
     synchronized void foo() {
         synchronized (this) {} // not OK
-        synchronized (Class.class) { // OK
+        synchronized (Class.class) {
             synchronized (new Object()) {
                 // not OK if checking statements
             }

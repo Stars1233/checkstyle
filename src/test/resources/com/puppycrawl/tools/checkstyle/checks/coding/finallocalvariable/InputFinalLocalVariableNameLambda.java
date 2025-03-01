@@ -9,7 +9,7 @@ tokens = PARAMETER_DEF,VARIABLE_DEF
 package com.puppycrawl.tools.checkstyle.checks.coding.finallocalvariable;
 
 import java.math.BigDecimal;
-
+import java.util.function.Function;
 
 public class InputFinalLocalVariableNameLambda {
     private interface Lambda {
@@ -32,12 +32,15 @@ public class InputFinalLocalVariableNameLambda {
             .reduce(BigDecimal.ZERO,
                     (t, u) -> t.add(u.getAmount()));
  }
+    public static void main(final String[] args) {
+        final Function<Integer, Integer> doubleValue = (x) -> { return x * 2; };
+    }
 }
 interface Operation {
     public Object apply();
 
     public static final Operation OPERATION = () -> {
-        Object result; // violation
+        Object result; // violation, "Variable 'result' should be declared final"
         result = null;
         return result;
     };

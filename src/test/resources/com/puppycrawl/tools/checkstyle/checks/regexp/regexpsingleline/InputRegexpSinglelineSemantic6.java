@@ -5,7 +5,7 @@ message = someMessage
 ignoreCase = (default)false
 minimum = 500
 maximum = (default)0
-fileExtensions = (default)all files
+fileExtensions = (default)""
 
 
 */
@@ -213,7 +213,7 @@ class InputRegexpSinglelineSemantic6
 
     synchronized void foo() {
         synchronized (this) {} // not OK
-        synchronized (Class.class) { // OK
+        synchronized (Class.class) {
             synchronized (new Object()) {
                 // not OK if checking statements
             }
